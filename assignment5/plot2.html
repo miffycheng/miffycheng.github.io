@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-3ba27f57ea76f56782c7c2c30a6d0c4a"}, "mark": {"type": "bar"}, "encoding": {"x": {"field": "Square Footage", "title": "Average Square Footage", "type": "quantitative"}, "y": {"field": "Usage Description", "sort": "-x", "title": "Building Usage", "type": "nominal"}}, "height": 400, "title": "Average Building Size by Usage (Top 15)", "width": 650, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-3ba27f57ea76f56782c7c2c30a6d0c4a": [{"Usage Description": "Education", "Square Footage": 52669.09302325582}, {"Usage Description": "Business", "Square Footage": 25471.6}, {"Usage Description": "Assembly", "Square Footage": 24682.04430379747}, {"Usage Description": "Health Care", "Square Footage": 22014.798429319373}, {"Usage Description": "Detention & Correc", "Square Footage": 12318.300957592339}, {"Usage Description": "Industrial", "Square Footage": 9030.420783645655}, {"Usage Description": "Residential", "Square Footage": 8201.885220125787}, {"Usage Description": "Storage", "Square Footage": 5096.337965038099}, {"Usage Description": "Mercantile", "Square Footage": 4017.753246753247}, {"Usage Description": "Utiility & Miscellan", "Square Footage": 1051.857142857143}, {"Usage Description": "Unusual", "Square Footage": 930.1508313539192}, {"Usage Description": "Public", "Square Footage": 560.0}, {"Usage Description": "Not provided", "Square Footage": 96.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
