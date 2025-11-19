@@ -10,7 +10,7 @@ title: HW3 – Building Inventory Visualizations
 
 ## The Analysis
 You can view the full notebook here:  
-[building_inventory.ipynb]([hw3_building_inventory.ipynb](https://github.com/miffycheng/miffycheng.github.io/blob/main/python_notebooks/building_inventory.ipynb)
+[building_inventory.ipynb](https://github.com/miffycheng/miffycheng.github.io/blob/main/python_notebooks/building_inventory.ipynb)
 
 ---
 
