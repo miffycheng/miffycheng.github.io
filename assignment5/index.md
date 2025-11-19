@@ -1,6 +1,6 @@
 ---
 layout: default
-title: HW3 – Building Inventory Visualizations
+title: Building Inventory Visualizations
 ---
 
 # Homework 5 – Submit Jekyll webpage link
